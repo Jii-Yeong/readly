@@ -11,6 +11,7 @@ type CommonButtonProps = {
   borderRadius?: string | number
   borderColor?: string
   borderWidth?: string | number
+  clickButton?: () => void
 }
 
 export default function CommonButton({
@@ -22,10 +23,12 @@ export default function CommonButton({
   borderRadius = parseDomSizeValue(8),
   borderColor = COLORS.gray,
   borderWidth = 1,
+  clickButton,
 }: CommonButtonProps) {
   return (
     <button
       className="px-[12px] py-[8px]"
+      onClick={clickButton}
       style={{
         backgroundColor,
         color,
