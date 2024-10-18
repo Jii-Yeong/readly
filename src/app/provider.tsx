@@ -1,5 +1,8 @@
+'use client'
+
 import { GoogleOAuthProvider } from '@react-oauth/google'
-import React, { ReactNode } from 'react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import React, { ReactNode, useState } from 'react'
 
 type ProviderProps = {
   children: ReactNode
@@ -7,9 +10,13 @@ type ProviderProps = {
 
 export default function Provider({ children }: ProviderProps) {
   const googleClientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ''
+  const [queryClient] = useState(() => new QueryClient())
+
   return (
-    <GoogleOAuthProvider clientId={googleClientId}>
-      {children}
-    </GoogleOAuthProvider>
+    <QueryClientProvider client={queryClient}>
+      <GoogleOAuthProvider clientId={googleClientId}>
+        {children}
+      </GoogleOAuthProvider>
+    </QueryClientProvider>
   )
 }
