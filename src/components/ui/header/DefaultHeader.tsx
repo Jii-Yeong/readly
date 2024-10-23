@@ -3,6 +3,7 @@
 import CommonButton from '../button/CommonButton/CommonButton'
 import { useGoogleLogin } from '@react-oauth/google'
 import { loginByGoogleMutation } from '@/service/users.service'
+import ProfileImage from '../image/ProfileImage/ProfileImage'
 
 export default function DefaultHeader() {
   const mutation = loginByGoogleMutation()
@@ -18,6 +19,7 @@ export default function DefaultHeader() {
       <div className="flex flex-row gap-x-2">
         <CommonButton text="로그인" clickButton={loginGoogle} />
         <CommonButton text="회원가입" />
+        <ProfileImage />
       </div>
     </div>
   )
