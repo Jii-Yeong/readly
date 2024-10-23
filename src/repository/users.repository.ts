@@ -1,6 +1,7 @@
 import { readlyApiAxiosInstance } from "@/api/readly-api"
-import axios from "axios"
+import { LoginByGoogleResponse } from "@/model/users.dto"
 
-export const addUserData = async () => {
-  await readlyApiAxiosInstance().post('api/sign-up', { data: 1 })
+export const loginByGoogle = async (code: string): Promise<LoginByGoogleResponse> => {
+  const { data } = await readlyApiAxiosInstance().post('/auth/login', { code })
+  return data
 }

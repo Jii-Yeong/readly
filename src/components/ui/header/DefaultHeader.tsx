@@ -1,12 +1,16 @@
 'use client'
 
-import React from 'react'
 import CommonButton from '../button/CommonButton/CommonButton'
 import { useGoogleLogin } from '@react-oauth/google'
+import { loginByGoogleMutation } from '@/service/users.service'
 
 export default function DefaultHeader() {
+  const mutation = loginByGoogleMutation()
   const loginGoogle = useGoogleLogin({
-    onSuccess: (tokenResponse) => console.log(tokenResponse),
+    onSuccess: async (tokenResponse) => {
+      mutation.mutate(tokenResponse.code)
+    },
+    flow: 'auth-code',
   })
   return (
     <div className="bg-main w-full h-[56px] px-[8px] flex flex-row justify-between items-center">

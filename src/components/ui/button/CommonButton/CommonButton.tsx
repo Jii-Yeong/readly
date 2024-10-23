@@ -1,6 +1,5 @@
-import { COLORS } from '@/constants/color'
+import { COLORS } from '@/constants/color.constants'
 import { parseDomSizeValue } from '@/utils/string.utils'
-import React from 'react'
 
 type CommonButtonProps = {
   text: string
