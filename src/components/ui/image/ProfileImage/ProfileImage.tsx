@@ -14,7 +14,7 @@ export default function ProfileImage({
 }: ProfileImageProps) {
   return (
     <div
-      className="relative w-10"
+      className="relative w-10 rounded-full overflow-hidden"
       style={{
         width: parseDomSizeValue(size),
         height: parseDomSizeValue(size),
