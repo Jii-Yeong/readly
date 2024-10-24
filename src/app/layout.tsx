@@ -31,9 +31,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Provider>
-          <div>
+          <div className="flex flex-col items-center">
             <DefaultHeader />
-            {children}
+            <div className="w-[800px] m-[24px]">{children}</div>
           </div>
         </Provider>
       </body>
