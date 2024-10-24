@@ -1,4 +1,4 @@
 export type LoginByGoogleResponse = {
   message: string;
-  refreshToken: string;
+  accessToken: string;
 }
