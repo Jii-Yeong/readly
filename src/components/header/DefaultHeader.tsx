@@ -1,9 +1,9 @@
 'use client'
 
-import CommonButton from '../button/CommonButton/CommonButton'
+import CommonButton from '../ui/button/CommonButton/CommonButton'
 import { useGoogleLogin } from '@react-oauth/google'
 import { loginByGoogleMutation } from '@/service/auth.service'
-import ProfileImage from '../image/ProfileImage/ProfileImage'
+import ProfileImage from '../ui/image/ProfileImage/ProfileImage'
 import { getUserInfoQuery } from '@/service/user.service'
 import Link from 'next/link'
 
