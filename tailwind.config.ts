@@ -9,7 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        main: '#5ae9e4'
+        main: '#5ae9e4',
+        black: '#111111',
+        gray: '#d3d3d3'
       },
       fontSize: {
         sm: '12px',
