@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import CommonInput from './CommonInput';
 
 const meta = {
-  title: 'UI/CommonInput',
+  title: 'UI/Input/CommonInput',
   component: CommonInput,
   parameters: {
     layout: 'centered',

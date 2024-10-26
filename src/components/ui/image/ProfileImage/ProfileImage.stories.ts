@@ -3,7 +3,7 @@ import ProfileImage from './ProfileImage';
 import defaultProfileImage from 'public/images/users/default-profile-image.webp';
 
 const meta = {
-  title: 'UI/ProfileImage',
+  title: 'UI/Image/ProfileImage',
   component: ProfileImage,
   parameters: {
     layout: 'centered',

@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 import CommonButton from './CommonButton';
 
 const meta = {
-  title: 'UI/Button',
+  title: 'UI/Button/CommonButton',
   component: CommonButton,
   parameters: {
     layout: 'centered',
