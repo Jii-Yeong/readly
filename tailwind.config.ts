@@ -11,10 +11,12 @@ const config: Config = {
       colors: {
         main: '#5ae9e4',
         black: '#111111',
-        gray: '#d3d3d3'
+        gray: '#d3d3d3',
+        'dark-gray': '#898989',
       },
       fontSize: {
         sm: '12px',
+        md: '14px',
         base: '16px',
         lg: '24px',
         xl: '32px',

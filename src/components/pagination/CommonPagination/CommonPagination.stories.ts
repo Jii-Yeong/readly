@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     totalCount: 10,
-    setPagination: () => { },
-    viewButtonCount: 5
+    viewButtonCount: 5,
+    clickButton: () => { }
   },
 };

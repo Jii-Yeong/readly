@@ -5,14 +5,12 @@ import { Icon } from '@iconify/react'
 
 type CommonPaginationProps = {
   totalCount: number
-  setPagination: (pagination: number) => void
   clickButton: (pagination: number) => void
   viewButtonCount?: number
 }
 
 export default function CommonPagination({
   totalCount,
-  setPagination,
   clickButton,
   viewButtonCount = 10,
 }: CommonPaginationProps) {
@@ -53,7 +51,6 @@ export default function CommonPagination({
   }
 
   const clickPaginationButton = (pagination: number) => {
-    setPagination(pagination)
     clickButton(pagination)
   }
 

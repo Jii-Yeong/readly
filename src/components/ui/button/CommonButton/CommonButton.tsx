@@ -1,5 +1,6 @@
 import { COLORS } from '@/constants/color.constants'
 import { parseDomSizeValue } from '@/utils/string.utils'
+import { CSSProperties } from 'react'
 
 type CommonButtonProps = {
   text: string
@@ -12,6 +13,7 @@ type CommonButtonProps = {
   borderWidth?: string | number
   fontSize?: string | number
   padding?: string | number
+  style?: CSSProperties
   clickButton?: () => void
 }
 
@@ -26,6 +28,7 @@ export default function CommonButton({
   borderWidth = 1,
   fontSize = 16,
   padding = 8,
+  style,
   clickButton,
 }: CommonButtonProps) {
   return (
@@ -42,6 +45,7 @@ export default function CommonButton({
         borderWidth: parseDomSizeValue(borderWidth),
         fontSize: parseDomSizeValue(fontSize),
         padding: parseDomSizeValue(padding),
+        ...style,
       }}>
       {text}
     </button>
