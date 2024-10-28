@@ -10,6 +10,8 @@ type CommonButtonProps = {
   borderRadius?: string | number
   borderColor?: string
   borderWidth?: string | number
+  fontSize?: string | number
+  padding?: string | number
   clickButton?: () => void
 }
 
@@ -22,20 +24,24 @@ export default function CommonButton({
   borderRadius = parseDomSizeValue(8),
   borderColor = COLORS.gray,
   borderWidth = 1,
+  fontSize = 16,
+  padding = 8,
   clickButton,
 }: CommonButtonProps) {
   return (
     <button
-      className="px-[12px] py-[8px]"
+      className="hover:opacity-60"
       onClick={clickButton}
       style={{
         backgroundColor,
         color,
-        width,
-        height,
-        borderRadius,
+        width: parseDomSizeValue(width),
+        height: parseDomSizeValue(height),
+        borderRadius: parseDomSizeValue(borderRadius),
         borderColor,
-        borderWidth,
+        borderWidth: parseDomSizeValue(borderWidth),
+        fontSize: parseDomSizeValue(fontSize),
+        padding: parseDomSizeValue(padding),
       }}>
       {text}
     </button>
