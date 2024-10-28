@@ -33,7 +33,7 @@ export default function RootLayout({
         <Provider>
           <div className="flex flex-col items-center">
             <DefaultHeader />
-            <div className="w-[800px] m-[24px]">{children}</div>
+            <div className="w-[600px] m-[24px]">{children}</div>
           </div>
         </Provider>
       </body>
